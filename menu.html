@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Parqueadero Reyes Sánchez</title>
+    <link rel="icon" href="../img/LOGO.jpeg">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <header>
+        <img src="../img/LOGO.jpeg" alt="Logo Parqueadero Reyes Sánchez">
+        <h1>Parqueadero Reyes Sánchez</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-parqueadero">
+        <div class="container-fluid justify-content-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuNav" aria-controls="menuNav"
+                    aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <div class="navbar-nav mx-auto text-center">
+                    <a class="nav-link" href="menu.html">Inicio</a>
+                    <a class="nav-link" href="listado_usuarios.html">Usuarios</a>
+                    <a class="nav-link" href="listado_clientes.html">Clientes</a>
+                    <a class="nav-link" href="listado_vehiculos.html">Vehículos</a>
+                    <a class="nav-link" href="listado_entradas.html">Entradas</a>
+                    <a class="nav-link" href="listado_salidas.html">Salidas</a>
+                    <a class="nav-link nav-link-logout" href="../index.html" id="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contenido-pagina">
+
+        <main>
+            <section class="tarjeta">
+                <h2>Bienvenido al sistema</h2>
+                <p id="mensajeBienvenida">
+                    Administre usuarios, clientes, vehículos y movimientos
+                    del parqueadero desde un solo lugar. Usa el menú de arriba
+                    para consultar los registros existentes.
+                </p>
+            </section>
+        </main>
+
+        <h2 class="menu-formularios-titulo">Crear un nuevo registro</h2>
+        <section class="menu-formularios container my-4">
+    <div class="row g-3 justify-content-center">
+        
+        <!-- Registrar Usuario -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="registro_usuario.html" class="opcion text-decoration-none h-100 d-flex flex-column p-3 border rounded text-dark">
+                <span class="opcion-icono fs-2 mb-2" aria-hidden="true">🧑‍💼</span>
+                <h3>Registrar Usuario</h3>
+                <p class="mb-0 text-muted">Crear un nuevo usuario del sistema (admin o empleado).</p>
+            </a>
+        </div>
+
+        <!-- Registrar Cliente -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="registro_cliente.html" class="opcion text-decoration-none h-100 d-flex flex-column p-3 border rounded text-dark">
+                <span class="opcion-icono fs-2 mb-2" aria-hidden="true">🧾</span>
+                <h3>Registrar Cliente</h3>
+                <p class="mb-0 text-muted">Guardar los datos de un nuevo cliente.</p>
+            </a>
+        </div>
+
+        <!-- Registrar Vehículo -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="registro_vehiculo.html" class="opcion text-decoration-none h-100 d-flex flex-column p-3 border rounded text-dark">
+                <span class="opcion-icono fs-2 mb-2" aria-hidden="true">🚗</span>
+                <h3>Registrar Vehículo</h3>
+                <p class="mb-0 text-muted">Asociar un vehículo a un plan del parqueadero.</p>
+            </a>
+        </div>
+
+        <!-- Registro de Entrada -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="registro_entrada.html" class="opcion text-decoration-none h-100 d-flex flex-column p-3 border rounded text-dark">
+                <span class="opcion-icono fs-2 mb-2" aria-hidden="true">⬇️</span>
+                <h3>Registro de Entrada</h3>
+                <p class="mb-0 text-muted">Registrar la entrada de un vehículo.</p>
+            </a>
+        </div>
+
+        <!-- Registro de Salida -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="registro_salida.html" class="opcion text-decoration-none h-100 d-flex flex-column p-3 border rounded text-dark">
+                <span class="opcion-icono fs-2 mb-2" aria-hidden="true">⬆️</span>
+                <h3>Registro de Salida</h3>
+                <p class="mb-0 text-muted">Registrar la salida y calcular el pago.</p>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-brand">
+                <img src="../img/LOGO.jpeg" alt="Logo Parqueadero Reyes Sánchez">
+                <div>
+                    <strong>Parqueadero Reyes Sánchez</strong>
+                    <p>Gestión de entradas, salidas, clientes y vehículos.</p>
+                </div>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <nav class="site-footer-links" aria-label="Enlaces del pie de página">
+                    <a href="menu.html">Inicio</a>
+                    <a href="listado_entradas.html">Entradas activas</a>
+                    <a href="listado_salidas.html">Historial de salidas</a>
+                    <a href="listado_vehiculos.html">Vehículos</a>
+                </nav>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <div class="site-footer-contact">
+                    <p>Cl. 61c # 21-19, Ibagué, Tolima</p>
+                    <p>Tel: 310 5502808</p>
+                    <p>Lun–Dom:Las 24 horas</p>
+                </div>
+            </div>
+        </div>
+        <p class="site-footer-copy">&copy; <span id="footerYear"></span> Parqueadero Reyes Sánchez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/db.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

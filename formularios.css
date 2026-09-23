@@ -1,0 +1,159 @@
+/* =========================================================
+   formularios.css — formularios y pantallas de acceso
+   (login, registro de cuenta, y los 5 formularios de registro)
+   ========================================================= */
+
+.contenedor-formulario {
+    width: 90%;
+    max-width: 460px;
+    margin: 40px auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--color-blanco);
+    padding: 32px 34px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    border-top: 6px solid var(--color-primario);
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.formularios {
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.logo {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    border: 3px solid var(--color-primario);
+    padding: 3px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.encabezado h2 {
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 22px;
+}
+
+.reg {
+    text-align: center;
+    padding: 6px 20px 26px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+label {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: var(--color-texto);
+    font-size: 14px;
+}
+
+form label:first-of-type {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="password"],
+input[type="tel"],
+select {
+    padding: 11px 12px;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-chico);
+    font-size: 15px;
+    font-family: inherit;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+    width: 100%;
+}
+
+input::placeholder {
+    color: #9aa3a8;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px var(--color-primario-suave);
+}
+
+input[readonly] {
+    background-color: #f4f6f7;
+    color: var(--color-texto-suave);
+    cursor: not-allowed;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #c65a5a;
+}
+
+small.ayuda {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--color-texto-suave);
+}
+
+.fila-botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.fila-botones > * {
+    flex: 1;
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+    margin-top: 24px;
+}
+
+/* Pantallas de login / crear cuenta */
+.site-footer-auth + .contenedor-formulario,
+body:has(> .site-footer-auth) .contenedor-formulario {
+    margin-top: 30px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    form,
+    .contenedor-formulario,
+    .tarjeta {
+        padding: 22px 20px;
+    }
+
+    .reg {
+        padding: 14px;
+    }
+}

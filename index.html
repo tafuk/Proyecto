@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Parqueadero Reyes Sánchez</title>
+    <link rel="icon" href="img/LOGO.jpeg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <img src="img/LOGO.jpeg" alt="Logo Parqueadero Reyes Sánchez">
+        <h1>Iniciar sesión</h1>
+    </header>
+
+    <div class="contenedor-formulario">
+        <div class="formularios">
+            <form action="pages/menu.html" method="get">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" name="usuario" id="usuario" required class="text" autocomplete="username">
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena" required class="text" autocomplete="current-password">
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <div class="reg volver">
+                <a href="pages/registro.html">¿No tienes cuenta? Regístrate aquí</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer-auth">
+        <p>&copy; <span id="footerYear"></span> Parqueadero Reyes Sánchez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* =========================================================
+   tablas.css — listados de registros (Usuarios, Clientes,
+   Vehículos, Entradas, Salidas) accesibles desde el menú
+   hamburguesa.
+   ========================================================= */
+
+.listado-contenedor {
+    width: 92%;
+    max-width: 1050px;
+    margin: 30px auto 60px;
+    flex: 1;
+}
+
+.listado-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.listado-cabecera h2 {
+    color: var(--color-primario-oscuro);
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.listado-cabecera p {
+    color: var(--color-texto-suave);
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.listado-acciones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-blanco);
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-chico);
+    padding: 8px 14px;
+    margin-bottom: 18px;
+}
+
+.buscador input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    background: transparent;
+}
+
+.buscador span {
+    color: var(--color-texto-suave);
+}
+
+.tabla-envoltorio {
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+table.tabla-registros {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-registros thead {
+    background-color: var(--color-primario);
+}
+
+.tabla-registros thead th {
+    color: var(--color-blanco);
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.tabla-registros tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #eef0f1;
+    font-size: 14.5px;
+    color: var(--color-texto);
+}
+
+.tabla-registros tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-registros tbody tr:hover {
+    background-color: #fbf3f3;
+}
+
+.tabla-registros td.celda-fuerte {
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+}
+
+.celda-acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.boton-fila {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color-texto-suave);
+    padding: 6px 8px;
+    border-radius: var(--radio-chico);
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+.boton-fila:hover {
+    background-color: #fdecea;
+    color: var(--color-primario-oscuro);
+}
+
+.boton-fila.eliminar:hover {
+    background-color: #fdecea;
+    color: #b3261e;
+}
+
+.estado-vacio {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-texto-suave);
+}
+
+.estado-vacio .icono {
+    font-size: 2.4rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.estado-vacio a {
+    color: var(--color-primario);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.estado-vacio a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Vista de tarjetas para pantallas angostas ===== */
+@media (max-width: 720px) {
+    .tabla-registros thead {
+        display: none;
+    }
+
+    .tabla-registros,
+    .tabla-registros tbody,
+    .tabla-registros tr,
+    .tabla-registros td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-registros tr {
+        padding: 14px 16px;
+        border-bottom: 8px solid var(--color-fondo);
+    }
+
+    .tabla-registros td {
+        border: none;
+        padding: 6px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        text-align: right;
+    }
+
+    .tabla-registros td::before {
+        content: attr(data-etiqueta);
+        font-weight: 700;
+        color: var(--color-texto-suave);
+        text-align: left;
+        font-size: 12.5px;
+        text-transform: uppercase;
+    }
+
+    .celda-acciones {
+        justify-content: flex-end;
+    }
+}
